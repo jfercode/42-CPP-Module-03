@@ -1,5 +1,5 @@
 # Static library name
-NAME		= ex03
+NAME		= ex02
 # Compiler and flags
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -g -std=c++98

@@ -6,7 +6,7 @@
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:17:52 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/05/28 14:20:26 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/06/25 11:05:21 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class ClapTrap
   public:
 	ClapTrap(/* args */);
 	ClapTrap(const std::string& _name);
+	ClapTrap(const ClapTrap &copy);
+	ClapTrap& operator=(const ClapTrap &copy);
 	~ClapTrap();
 
 	void attack(const std::string &target);

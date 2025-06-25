@@ -6,7 +6,7 @@
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:32:00 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/05/28 14:47:15 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/06/25 11:05:48 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,28 @@ ClapTrap::ClapTrap(const std::string& _name)
 {
 	std::cout << "ClapTrap " << _Name << " arrives!"
 			  << std::endl;
+}
+ClapTrap::ClapTrap(const ClapTrap& copy)
+{
+	this->_Name = copy._Name;
+	this->_HitPoints = copy._HitPoints;
+	this->_EnergyPoints = copy._EnergyPoints;
+	this->_AttackDamage = copy._AttackDamage;
+	std::cout << "ClapTrap " << _Name << " arrives!"
+			  << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& copy)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	if (this != &copy)
+	{
+		this->_Name = copy._Name;
+		this->_HitPoints = copy._HitPoints;
+		this->_EnergyPoints = copy._EnergyPoints;
+		this->_AttackDamage = copy._AttackDamage;
+	}
+	return (*this);
 }
 
 ClapTrap::~ClapTrap()
