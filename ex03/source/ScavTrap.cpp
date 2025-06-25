@@ -6,20 +6,26 @@
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:57:12 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/25 11:28:10 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/06/25 16:04:21 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ScavTrap.hpp"
 
-ScavTrap::ScavTrap(/* args */) : ClapTrap()
+ScavTrap::ScavTrap(/* args */) : ClapTrap("ScavTrap")
 {
+    this->_HitPoints = 100;
+    this->_EnergyPoints = 50;
+    this->_AttackDamage = 20;
     std::cout << "ScavTrap " << _Name << " arrives!"
               << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& _name) : ClapTrap(_name)
 {
+    this->_HitPoints = 100;
+    this->_EnergyPoints = 50;
+    this->_AttackDamage = 20; 
     std::cout << "ScavTrap " << _Name << " arrives!"
               << std::endl;
 }
@@ -52,6 +58,14 @@ ScavTrap::~ScavTrap()
 {
     std::cout << "ScavTrap " << _Name << " leaves!" 
               << std::endl;
+}
+
+void    ScavTrap::attack(const std::string& target)
+{
+    std::cout << "ScavTrap " << _Name << " attacks " << target 
+			  << ", causing " << _AttackDamage << " points of damage!"
+			  << std::endl;
+	this->_EnergyPoints--;
 }
 
 void    ScavTrap::guardGate()

@@ -6,21 +6,21 @@
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:32:00 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/25 11:05:48 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/06/25 15:28:39 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
 
-ClapTrap::ClapTrap(/* args */) 
-	: _Name("ClapTrap"), _HitPoints(100), _EnergyPoints(50), _AttackDamage(20) 
+ClapTrap::ClapTrap(/* args */)
+	: _Name("ClapTrap"), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0) 
 {
 	std::cout << "ClapTrap " << _Name << " arrives!"
 			  << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string& _name)
-	: _Name(_name), _HitPoints(100), _EnergyPoints(50), _AttackDamage(20)
+	: _Name(_name), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0)
 {
 	std::cout << "ClapTrap " << _Name << " arrives!"
 			  << std::endl;
@@ -76,7 +76,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	this->_HitPoints+=amount;
-	std::cout << "ClapTrap" << _Name << " repairs " << amount
+	std::cout << "ClapTrap " << _Name << " repairs " << amount
 			  << " points! HP is now " << _HitPoints << std::endl;
 }
 

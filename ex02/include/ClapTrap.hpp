@@ -6,12 +6,12 @@
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 13:17:52 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/25 11:37:28 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/06/25 15:29:30 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
+# pragma once
+# include <iostream>
 
 class ClapTrap
 {
